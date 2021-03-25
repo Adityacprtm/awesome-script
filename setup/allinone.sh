@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "MAKE SCRIPT EXECUTABLE..."
-find . -type f -name "*.sh" -exec chmod +x {} \;
+find setup/*/. -type f -name "*.sh" -exec chmod +x {} \;
 
 echo "INITIAL SETUP..."
 sh ./initial/install.sh
@@ -14,6 +14,12 @@ sh ./kubernetes/install.sh
 echo "HELM CHART SETUP..."
 sh ./helm/install.sh
 echo "TERRAFORM SETUP..."
+sh ./terraform/install.sh
+echo "CONSUL SETUP..."
+sh ./terraform/install.sh
+echo "VAULT SETUP..."
+sh ./terraform/install.sh
+echo "CONSUL-TEMPLATE SETUP..."
 sh ./terraform/install.sh
 
 echo "DONE"
