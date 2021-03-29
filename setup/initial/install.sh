@@ -28,17 +28,17 @@ sudo apt install -yq software-properties-common
 # check Apache configuration: apachectl configtest
 
 # INSTALLING PHP7 or Latest
-echo -e "\n ${Cyan} Installing PHP and common Modules.. ${Color_Off}"
-sudo apt -qq update
-sudo apt -yq install php php-common libapache2-mod-php php-curl php-dev php-gd php-imagick php-intl php-mbstring php-mysql php-pear php-pspell php-xml php-zip php-xmlrpc php-soap php-cli
+#echo -e "\n ${Cyan} Installing PHP and common Modules.. ${Color_Off}"
+#sudo apt -qq update
+#sudo apt -yq install php php-common libapache2-mod-php php-curl php-dev php-gd php-imagick php-intl php-mbstring php-mysql php-pear php-pspell php-xml php-zip php-xmlrpc php-soap php-cli
 
 # Enable mod_rewrite, required for WordPress permalinks and .htaccess files
-echo -e "\n ${Cyan} Enabling Modules.. ${Color_Off}"
-sudo apt -qq update
-sudo a2enmod rewrite
+#echo -e "\n ${Cyan} Enabling Modules.. ${Color_Off}"
+#sudo apt -qq update
+#sudo a2enmod rewrite
 #PHP7
-sudo phpenmod mbstring
-sudo service apache2 restart
+#sudo phpenmod mbstring
+#sudo service apache2 restart
 
 # INSTALLING PYTHON
 echo -e "\n ${Cyan} Installing Python2 and Python3.. ${Color_Off}"
@@ -61,12 +61,12 @@ export PATH=~/.npm-global/bin:$PATH
 source ~/.profile
 
 # INSTALLING COMPOSER
-echo -e "\n ${Cyan} Installing Composser and common modules.. ${Color_Off}"
-sudo apt -qq update
-sudo apt install -yq php-cli unzip zip
-cd ~
-curl -sS https://getcomposer.org/installer -o composer-setup.php
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+#echo -e "\n ${Cyan} Installing Composser and common modules.. ${Color_Off}"
+#sudo apt -qq update
+#sudo apt install -yq php-cli unzip zip
+#cd ~
+#curl -sS https://getcomposer.org/installer -o composer-setup.php
+#sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Configure Timezone
 sudo ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
