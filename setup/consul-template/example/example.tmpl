@@ -1,0 +1,5 @@
+{{ with secret "database/dev/shipment" }}
+[postgres]
+user = "{{ .Data.username }}"
+password = "{{ .Data.password }}"
+{{ end }}
